@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///Users/john/Downloads/signature-lightscapes.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Lightscapes - Holiday &amp; Landscape Lighting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffd700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav .logo::before {
+            content: '✨';
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            margin-top: 70px;
+            height: 90vh;
+            background: #f9f9f9;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #1a1a2e;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to bottom, transparent, #fff);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            z-index: 1;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: #1a1a2e;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #1a1a2e;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .services {
+            padding: 5rem 0;
+            background: #f9f9f9;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a2e;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            background: #0f0f1e;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .form-page {
+            margin-top: 70px;
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: calc(100vh - 70px);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .form-container h1 {
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        .form-container .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1a1a2e;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #ffd700;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
+        .success-message .checkmark {
+            font-size: 4rem;
+            color: #4caf50;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="file:///Users/john/Downloads/signature-lightscapes.html#" class="logo" onclick="showPage(&#39;home&#39;)">Signature Lightscapes</a>
+            <ul>
+                <li><a href="file:///Users/john/Downloads/signature-lightscapes.html#" onclick="showPage(&#39;home&#39;)">Home</a></li>
+                <li><a href="file:///Users/john/Downloads/signature-lightscapes.html#" onclick="showPage(&#39;estimate&#39;)">Free Estimate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="homePage" class="page active">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Premium Residential Illumination</h1>
+                <p>Professional holiday and landscape lighting that transforms your property into a stunning masterpiece</p>
+                <a href="file:///Users/john/Downloads/signature-lightscapes.html#" class="btn" onclick="showPage(&#39;estimate&#39;)">Get Free Estimate</a>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🎄</div>
+                        <h3>Holiday Lighting</h3>
+                        <p>Transform your home into a winter wonderland with our professional holiday lighting installations. From classic elegance to spectacular displays, we bring your vision to life.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🌳</div>
+                        <h3>Landscape Lighting</h3>
+                        <p>Enhance your property's beauty and security with expertly designed landscape lighting. Highlight architectural features, trees, and pathways year-round.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Transform Your Property?</h2>
+                <p>Get a free estimate today and discover how our lighting solutions can enhance your home</p>
+                <a href="file:///Users/john/Downloads/signature-lightscapes.html#" class="btn" onclick="showPage(&#39;estimate&#39;)">Request Free Estimate</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>© 2024 Signature Lightscapes. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="estimatePage" class="page">
+        <div class="form-page">
+            <div class="container">
+                <div class="form-container">
+                    <div id="formContent" style="display: block;">
+                        <h1>Free Estimate</h1>
+                        <p class="subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+                        <form id="estimateForm" action="https://formspree.io/f/mdkpajdo" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Property Address *</label>
+                                <input type="text" id="address" name="address" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Interested In *</label>
+                                <select id="service" name="service" required="">
+                                    <option value="">Select a service</option>
+                                    <option value="holiday">Holiday Lighting</option>
+                                    <option value="landscape">Landscape Lighting</option>
+                                    <option value="both">Both</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Additional Details</label>
+                                <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            <input type="hidden" name="_subject" value="New Estimate Request from Signature Lightscapes">
+                            <input type="hidden" name="_replyto" id="_replyto">
+                            <button type="submit" class="btn" style="width: 100%;">Submit Request</button>
+                        </form>
+                    </div>
+                    <div id="successMessage" class="success-message">
+                        <div class="checkmark">✓</div>
+                        <h2>Thank You!</h2>
+                        <p>We've received your estimate request and will contact you within 24 hours.</p>
+                        <br>
+                        <a href="file:///Users/john/Downloads/signature-lightscapes.html#" class="btn" onclick="showPage(&#39;home&#39;)">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <p>© 2024 Signature Lightscapes. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function showPage(pageName) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            if (pageName === 'home') {
+                document.getElementById('homePage').classList.add('active');
+            } else if (pageName === 'estimate') {
+                document.getElementById('estimatePage').classList.add('active');
+                document.getElementById('formContent').style.display = 'block';
+                document.getElementById('successMessage').classList.remove('active');
+            }
+            
+            window.scrollTo(0, 0);
+            return false;
+        }
+
+        // Handle form submission with Formspree
+        const form = document.getElementById('estimateForm');
+        if (form) {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Set the reply-to email
+                document.getElementById('_replyto').value = document.getElementById('email').value;
+                
+                const formData = new FormData(form);
+                
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        document.getElementById('formContent').style.display = 'none';
+                        document.getElementById('successMessage').classList.add('active');
+                        form.reset();
+                    } else {
+                        alert('Oops! There was a problem submitting your form. Please try again.');
+                    }
+                } catch (error) {
+                    alert('Oops! There was a problem submitting your form. Please try again.');
+                }
+            });
+        }
+    </script>
+
+</body></html>
